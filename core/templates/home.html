@@ -1,3 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+<h1>{{ msg }}</h1>
+<nav>
+    <a href="{% url 'signup' %}">Sign Up</a>
+</nav>
 {% endblock %}
