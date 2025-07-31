@@ -11,3 +11,12 @@ class UserLoginForm(forms.Form):
 
     phone = forms.CharField(label='Enter Phone')
     password = forms.CharField(label='Password',widget=forms.PasswordInput)
+
+class ResetPassword(forms.Form):
+
+    new_password = forms.CharField(label='New Password',widget=forms.PasswordInput)
+    confirm_password = forms.CharField(label='Confirm Password',widget=forms.PasswordInput)
+
+class PhoneForm(forms.Form):
+
+    phone = forms.CharField(label='Enter Phone')
