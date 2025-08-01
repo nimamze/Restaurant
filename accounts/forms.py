@@ -20,3 +20,13 @@ class ResetPassword(forms.Form):
 class PhoneForm(forms.Form):
 
     phone = forms.CharField(label='Enter Phone')
+
+class ProfileUpdateForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ['email','phone','first_name','last_name']
+
+class VerifyForm(forms.Form):
+
+    input = forms.CharField(max_length=3)

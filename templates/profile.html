@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Profile Page</h1>
+<h1>Name : {{ user.first_name }} {{ user.last_name }}</h1>
+<h1>Email : {{ user.email }}</h1>
+<h1>Phone : {{ user.phone }}</h1>
+{% if user.is_manager %}
+<h1>You Are Restaurant Manger</h1>
+{% else %}
+<h1>You Are Not Restaurant Manger</h1>
+{% endif %}
+{% if user.verified %}
+<h1>You Are Verified</h1>
+{% else %}
+<h1>You Are Not Verified Yet <a href="{% url 'verify' %}">Wanna Do It ?</a></h1>
+{% endif %}
+<h1>Sign Up Date : {{ user.date }}</h1>
+<h1><a href="{% url 'updateProfile' %}">Wanna Change Your Information ?</a></h1>
+{% endblock %}
